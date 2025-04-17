@@ -124,6 +124,9 @@ header nav ul li{
     width: 83px;
 }
 
+.btn-menu-mobile {
+    display: none;
+}
 
 
 /* Estilo do main */

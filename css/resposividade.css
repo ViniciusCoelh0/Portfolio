@@ -1,7 +1,7 @@
 /* ======================== */
 /* RESPONSIVIDADE PADRÃO   */
 /* ======================== */
-@media screen and (max-width: 1224px) and (min-width: 795px) {
+@media screen and (max-width: 1024px) {
     .flex {
         flex-direction: column;
         gap: 40px;
@@ -22,10 +22,6 @@
     header nav ul li {
         padding: 0 20px;
         font-size: 18px;
-    }
-
-    .btn-menu-mobile{
-        display: none;
     }
 
     .topo-do-site .img-topo-site img {
@@ -50,7 +46,7 @@
 /* ======================== */
 /* TELAS MENORES (768px)    */
 /* ======================== */
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 768px) {
     header > .interface {
         flex-direction: column;
         gap: 15px;
