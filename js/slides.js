@@ -4,21 +4,20 @@ const prevButton = document.querySelector('.bi-arrow-left');
 const nextButton = document.querySelector('.bi-arrow-right');
 
 let slideIndex = 0;
-let isDragging = false;
-let startX;
-let scrollLeft;
+let slidesToShow = getSlidesToShow();
+let autoSlideInterval;
+const autoSlideDelay = 3000; // Tempo em milissegundos entre os slides (3 segundos)
+let isPaused = false;
 
 // Função para definir quantos slides exibir com base no tamanho da tela
 function getSlidesToShow() {
     const width = window.innerWidth;
-    if (width <= 480) return 1;
-    if (width <= 768) return 2;
+    if (width <= 580) return 1;
+    if (width <= 1500) return 2;
     return 3;
 }
 
-let slidesToShow = getSlidesToShow();
-
-function updateSlidesVisibility() {
+function showSlides() {
     slides.forEach((slide, index) => {
         const startIndex = slideIndex * slidesToShow;
         const endIndex = startIndex + slidesToShow;
@@ -28,65 +27,68 @@ function updateSlidesVisibility() {
 
 function nextSlide() {
     slideIndex++;
-    const totalVisibleSlides = Math.ceil(slides.length / slidesToShow);
-    if (slideIndex >= totalVisibleSlides) {
+    if (slideIndex * slidesToShow >= slides.length) {
         slideIndex = 0;
     }
-    updateSlidesVisibility();
+    showSlides();
 }
 
 function prevSlide() {
     slideIndex--;
     if (slideIndex < 0) {
-        const totalVisibleSlides = Math.ceil(slides.length / slidesToShow);
-        slideIndex = totalVisibleSlides - 1;
+        slideIndex = Math.floor((slides.length - 1) / slidesToShow);
     }
-    updateSlidesVisibility();
+    showSlides();
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        if (!isPaused) {
+            nextSlide();
+        }
+    }, autoSlideDelay);
+}
+
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+// Event listeners para pausar/continuar ao passar o mouse
+if (slideContainer) {
+    slideContainer.addEventListener('mouseenter', () => {
+        isPaused = true;
+    });
+
+    slideContainer.addEventListener('mouseleave', () => {
+        isPaused = false;
+    });
+}
+
+// Event listeners para os botões
+if (prevButton) {
+    prevButton.addEventListener('click', () => {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+    });
+}
+
+if (nextButton) {
+    nextButton.addEventListener('click', () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+    });
 }
 
 // Redefine os slides visíveis ao redimensionar a tela
 window.addEventListener('resize', () => {
     slidesToShow = getSlidesToShow();
     slideIndex = 0;
-    updateSlidesVisibility();
+    showSlides();
+    stopAutoSlide(); // Reinicia o auto slide após redimensionar
+    startAutoSlide();
 });
 
-// Adicionando funcionalidade de arrastar (opcional, mas pode melhorar a experiência em desktop)
-if (slideContainer) {
-    slideContainer.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.pageX - slideContainer.offsetLeft;
-        scrollLeft = slideContainer.scrollLeft;
-        slideContainer.style.cursor = 'grabbing';
-    });
-
-    slideContainer.addEventListener('mouseleave', () => {
-        isDragging = false;
-        slideContainer.style.cursor = 'grab';
-    });
-
-    slideContainer.addEventListener('mouseup', () => {
-        isDragging = false;
-        slideContainer.style.cursor = 'grab';
-    });
-
-    slideContainer.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        const x = e.pageX - slideContainer.offsetLeft;
-        const walk = (x - startX) * 1; // Ajuste a sensibilidade do arrasto conforme necessário
-        slideContainer.scrollLeft = scrollLeft - walk;
-    });
-}
-
-// Inicializa os slides
-updateSlidesVisibility();
-
-// Adiciona listeners para os botões (verifique se os botões existem no HTML)
-if (prevButton) {
-    prevButton.addEventListener('click', prevSlide);
-}
-
-if (nextButton) {
-    nextButton.addEventListener('click', nextSlide);
-}
+showSlides();
+startAutoSlide(); // Inicia o auto slide ao carregar a página
