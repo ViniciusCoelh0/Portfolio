@@ -54,10 +54,11 @@ p{
 }
 
 .flex{
+    padding: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 70px; 
+    gap: 70px;
 }
 
 .text{
