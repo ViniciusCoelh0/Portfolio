@@ -13,7 +13,7 @@ let isPaused = false;
 function getSlidesToShow() {
     const width = window.innerWidth;
     if (width <= 580) return 1;
-    if (width <= 1500) return 2;
+    if (width <= 1300) return 2;
     return 3;
 }
 
