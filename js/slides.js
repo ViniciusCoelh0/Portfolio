@@ -1,14 +1,20 @@
-// Seleciona os elementos necessários
 const slideContainer = document.querySelector('.container-slides');
 const slides = document.querySelectorAll('.card-item');
 const prevButton = document.querySelector('.bi-arrow-left');
 const nextButton = document.querySelector('.bi-arrow-right');
 
-// Variáveis para controlar o slide atual e o número de slides visíveis
 let slideIndex = 0;
-const slidesToShow = 3; 
 
-// Função para mostrar os slides
+// Função para definir quantos slides exibir com base no tamanho da tela
+function getSlidesToShow() {
+  const width = window.innerWidth;
+  if (width <= 480) return 1;
+  if (width <= 768) return 2;
+  return 3;
+}
+
+let slidesToShow = getSlidesToShow();
+
 function showSlides() {
   slides.forEach((slide, index) => {
     const startIndex = slideIndex * slidesToShow;
@@ -17,7 +23,6 @@ function showSlides() {
   });
 }
 
-// Função para mostrar o próximo conjunto de slides
 function nextSlide() {
   slideIndex++;
   if (slideIndex * slidesToShow >= slides.length) {
@@ -26,7 +31,6 @@ function nextSlide() {
   showSlides();
 }
 
-// Função para mostrar o conjunto anterior de slides
 function prevSlide() {
   slideIndex--;
   if (slideIndex < 0) {
@@ -35,11 +39,14 @@ function prevSlide() {
   showSlides();
 }
 
+// Redefine os slides visíveis ao redimensionar a tela
+window.addEventListener('resize', () => {
+  slidesToShow = getSlidesToShow();
+  slideIndex = 0;
+  showSlides();
+});
 
-
-// Mostra os slides iniciais
 showSlides();
 
-// Adiciona event listeners aos botões de navegação
 prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);

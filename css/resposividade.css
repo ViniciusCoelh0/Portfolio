@@ -161,4 +161,21 @@
     .btn.active:before {
         left: 36px;
     }
+
+    /* Ajustes para imagens e cards em telas pequenas */
+    .card-item {
+        flex-direction: column;
+        align-items: center;
+        width: 80% !important;
+        margin: 10px auto;
+    }
+
+    .container-slides {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 160px; /* Reduz ainda mais em telas muito pequenas */
+    }
 }
