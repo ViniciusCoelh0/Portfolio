@@ -1,0 +1,168 @@
+/* ======================== */
+/* RESPONSIVIDADE PADRÃO   */
+/* ======================== */
+@media screen and (max-width: 1224px) and (min-width: 795px) {
+    .flex {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 5%;
+    }
+
+    .text {
+        font-size: 32px;
+    }
+
+    .flex .especs-box .tamanhoParagrafo,
+    .flex .txt-sobre .tamanhoParagrafo {
+        font-size: 18px;
+        line-height: 140%;
+        margin-right: 0;
+    }
+
+    header nav ul li {
+        padding: 0 20px;
+        font-size: 18px;
+    }
+
+    .btn-menu-mobile{
+        display: none;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 300px;
+    }
+
+    .btn {
+        width: 70px;
+        height: 28px;
+    }
+
+    .btn:before {
+        width: 22px;
+        height: 22px;
+    }
+
+    .btn.active:before {
+        left: 42px;
+    }
+}
+
+/* ======================== */
+/* TELAS MENORES (768px)    */
+/* ======================== */
+@media screen and (max-width: 790px) {
+    header > .interface {
+        flex-direction: column;
+        gap: 15px;
+        position: relative;
+    }
+
+    header nav ul {
+        text-align: center;
+    }
+
+    .topo-do-site {
+        text-align: center;
+    }
+
+    .topo-do-site h1 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .topo-do-site .txt-topo-site p {
+        margin: 25px 0;
+    }
+
+    section .btn-contact button {
+        font-size: 16px;
+        padding: 1vh 2vh;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 260px;
+    }
+
+    .container {
+        width: 10%;
+    }
+
+    /* Menu hamburguer */
+    .menu-desktop {
+        display: none;
+    }
+
+    .btn-menu-mobile {
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+        color: #fff;
+        z-index: 1001;
+    }
+
+    .menu-mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #111;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .menu-mobile.active {
+        display: block;
+    }
+
+    .menu-mobile ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .menu-mobile ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+}
+
+/* ======================== */
+/* TELAS MUITO PEQUENAS     */
+/* ======================== */
+@media screen and (max-width: 480px) {
+    header nav ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .text {
+        font-size: 26px;
+    }
+
+    .topo-do-site h1 {
+        font-size: 26px;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 220px;
+    }
+
+    .btn {
+        width: 60px;
+        height: 24px;
+    }
+
+    .btn:before {
+        width: 20px;
+        height: 20px;
+    }
+
+    .btn.active:before {
+        left: 36px;
+    }
+}

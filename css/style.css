@@ -1,0 +1,255 @@
+:root{
+    --button: #3deda1;
+    --primary-color: #c8c8c8;
+    --secundary-color: #202D40;
+    --background: #D9D9D9;
+    --font-style: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    --font-color: #000;
+    --a-fontColor: #bebebe;
+    --a-effect: rgb(68, 218, 218);
+    --box-shadow: 0px 0px 10px 0px #0d7dbe;
+    --span: #50ebb2;
+    --specs-color: #fafafa;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* .white-mode{
+    --button: #346402;
+    --primary-color: #202D40;
+    --secundary-color: #dddcdc;
+    --background: #13678A;
+    --font-style:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --a-fontColor: #123;
+    --box-shadow: 0px 0px 10px 0px #000000;
+    --span: #3a7000;
+    --specs-color: #000000;
+} */
+
+/* Bloco geral */
+
+
+/* .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secundary-color);
+    width: 6%;
+
+    & .container.active{
+        background-color: #444;
+    }
+} */
+
+/* Especialidades */
+
+.especialidades{
+    padding: 40px 4%;
+}
+
+section .text span{
+    color: var(--span);
+}
+
+.especialidades .especs-box{
+    color: var(--primary-color);
+    padding: 40px;
+    margin-top: 30px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.especialidades .especs-box:hover{
+    transform: scale(1.05);
+    transition: 2s;
+    box-shadow: var(--box-shadow);
+}
+
+.especialidades .especs-box i{
+    font-size: 50px;
+    color: var(--span);
+}
+
+.especialidades .especs-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.especialidades .especs-box p{
+    text-align: justify;
+    font-size: 16px;
+}
+
+.especialidades .especs-box  a{
+    text-decoration: none;
+    color: var(--span);
+    transition: 2s;
+}
+
+.especialidades .especs-box span{
+    display: block;
+}
+
+.especialidades .especs-box a:hover{
+    color: var(--span);
+    box-shadow: 0px 0px 6px 0px var(--a-effect);
+}
+
+.especialidades .flex{
+    gap: 60px;
+}
+
+/* Container Projetos */
+
+.container-slides{
+    height: auto;
+    width: 100%;
+}
+
+.especialidades .container-projects{
+    display: flex;
+    justify-content: center;
+    /* box-shadow: 10px 0 3px 0 beige; */
+    color: var(--primary-color);
+}
+
+
+/* Arrumar aqui e criar os slides */
+.container-slides .container-projects .card-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    padding: 3rem 0;
+}
+
+.card-list .card-item{
+    list-style: none;
+}
+
+.card-list .card-item .card-link{
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background: var(--background);
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 10px var(--span);
+}
+
+.card-list .card-item .card-link:hover{
+    transform: scale(1.05);
+    transition: 2s;
+    box-shadow: var(--font-color);
+}
+
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge{
+    color: var(--font-color);
+    background: var(--button);
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    width: fit-content;
+    border-radius: 50px;
+    height: 40px;
+}
+
+.card-list .card-link .card-title{
+    font-size: 1.19rem;
+    color: var(--font-color);
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button{
+    height: 35px;
+    width: 35px;
+    color: var(--button);
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    border: 2px solid var(--button);
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button{
+    color: var(--button);
+    background: #fff;
+}
+
+
+/* Sobre mim */
+
+section.sobre{
+    padding: 40px 4%;
+}
+
+.img-sobre img{
+    border-radius: 10%;
+    box-shadow:var(--box-shadow);
+}
+
+.sobre .txt-sobre{
+    color: var(--primary-color);
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: var(--span);
+    display: block;
+    line-height: 50px;
+    margin-bottom: 25px;
+}
+
+.sobre .txt-sobre h2 .emoji{
+    display: inline;
+    color: var(--span);
+}
+
+.sobre .txt-sobre p{
+    margin: 10px 0;
+    line-height: 20px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.sobre .txt-sobre .btn-social a button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    background-color: var(--button);
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 8px;
+}
+
+.sobre .txt-sobre .btn-social a button:hover{
+    box-shadow: 0px 0px 8px var(--button);
+    transform: scale(1.05);
+}
+
+.sobre{
+    box-shadow: 0 0 6px 0 black;
+}
+
+.container-projects .card-list span {
+    font-size: 40px;
+}

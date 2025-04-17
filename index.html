@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="512x512" href="/favicon_io/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon_io/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Portfolio do Vinícius</title>
+    <link rel="stylesheet" href="css/port.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resposividade.css">
+    
+    
+</head>
+<body>
+    <header id="nav">
+        <div class="interface">
+            <div class="logo"><a href="#" class="logo-link"><img src="imgs/Logo - exp.png" alt=""></a></div><!--Logo-->
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a class="itens-nav" href="#inicio">Inicio</a></li>
+                    <li><a class="itens-nav" href="#especialidade">Projetos</a></li>
+                    <li><a class="itens-nav" href="#sobre">Saiba mais</a></li>
+                </ul>
+            </nav><!--menu-desktop-->
+    
+            <!-- Botão hamburguer -->
+            <div class="btn-menu-mobile" id="btn-menu-mobile">
+                <i class="bi bi-list"></i>
+            </div>
+    
+            <!-- Menu mobile -->
+            <nav class="menu-mobile" id="menu-mobile">
+                <ul>
+                    <li><a class="itens-nav" href="#inicio">Inicio</a></li>
+                    <li><a class="itens-nav" href="#especialidade">Projetos</a></li>
+                    <li><a class="itens-nav" href="#sobre">Saiba mais</a></li>
+                </ul>
+            </nav>
+
+            
+            <!-- Botão de mudar tema -->
+            <!-- <div class="container">
+                <div class="btn"></div>
+            </div> -->
+
+        </div><!--Interface-->
+    </header>
+
+    <main>
+        <section id="inicio" class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1><span>Front End Developer</span></h1>
+                        <p>Olá. sou Vinicius Dantas, estudante de Engenharia da Computação e Desenvolvedor Front-End.</p>
+                        <div class="btn-contact">
+                            <a href="#sobre">
+                                <button>Saiba mais</button>
+                            </a>
+                        </div>
+                    </div><!--txt-topo-site-->
+                    <div class="img-topo-site">
+                        <img src="imgs/pixelArt.jpeg" alt="">
+                    </div><!--img-topo-site -->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--topo-do-site-->
+    </main>
+
+
+        
+        <section id="especialidade" class="especialidades">
+            <div class="especs">
+                <h2 class="text">Meus <span>Projetos.</span></h2>
+                <div class="flex">
+                    <div class="especs-box">
+                        <i class="bi bi-code-slash"></i>
+                        <h3>Conhecimentos</h3>
+                        <p class="tamanhoParagrafo">Estudo e conheço as seguintes linguagens: JavaScript, Java;<br>
+                        Ferramentas de Design que estudo e conheço: Figma.</p>
+                    </div><!--especialidades-box-->
+                        
+                    </div><!--especialidades-box-->
+                </div> <!--flex--> 
+                
+                <div class="container-slides">
+                    <div class="container-projects">
+                        <ul class="card-list">
+                            <span><i class="bi bi-arrow-left" ></i></span>
+                            <li class="card-item">
+                                <a href="https://pet-life-gilt-phi.vercel.app" class="card-link" target="_blank">
+                                    <img src="imgs/PET-LIFE.png" alt="PetLife - Petshop" class="card-image">
+                                    <p class="badge">PetLife - Front-end</p>
+                                    <h2 class="card-title">Uma página simples e intuitiva de um petshop, projetada para oferecer uma navegação fácil e rápida. A página inicial exibe uma seção de boas-vindas com destaque para seus botões de "Marque uma consulta" e "Conheça nossa clinica".</h2>
+                                    <button class="card-button" src=""><i class="bi bi-arrow-return-right"></i></button>
+                                </a>
+                            </li>
+                            <li class="card-item">
+                                <a href="https://www.figma.com/proto/E93iBhHpFjbhOUuDa6HAtL/Air-Code?node-id=1-4&starting-point-node-id=1%3A4&t=UzWPyAfQ1ElUtjZT-1" class="card-link" target="_blank">
+                                    <img src="imgs/Aircod.png" alt="Air Code" class="card-image">
+                                    <p class="badge">Air Code - Design</p>
+                                    <h2 class="card-title">A AirCode é um projeto de design para um aplicativo de compra e venda de passagens aéreas.</h2>
+                                    <button class="card-button material-symbols-rounded"><i class="bi bi-arrow-return-right"></i></button>
+                                </a>
+                            </li>
+                            <li class="card-item">
+                                <a href="https://github.com/ViniciusCoelh0/To-do-list.git" class="card-link" target="_blank">
+                                    <img src="imgs/to-do list.png" alt="Air Code" class="card-image">
+                                    <p class="badge">To-do list - Front-end</p>
+                                    <h2 class="card-title">Uma To-do list feita com HTML, CSS e JavaScript.</h2>
+                                    <button class="card-button material-symbols-rounded"><i class="bi bi-arrow-return-right"></i></button>
+                                </a>
+                            </li>
+                            <li class="card-item">
+                                <a href="https://github.com/ViniciusCoelh0/To-do-list.git" class="card-link" target="_blank">
+                                    <img src="imgs/to-do list.png" alt="Air Code" class="card-image">
+                                    <p class="badge">To-do list - Front-end</p>
+                                    <h2 class="card-title">Uma To-do list feita com HTML, CSS e JavaScript.</h2>
+                                    <button class="card-button material-symbols-rounded"><i class="bi bi-arrow-return-right"></i></button>
+                                </a>
+                            </li>
+                        
+                            <span><i class="bi bi-arrow-right"></i></span>
+                        </ul> <!--card-list-->
+
+
+                </div> <!--container-slides-->
+            </div><!--specs-->
+        </section><!--especialidades-->
+
+        <section id="sobre" class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <a href="#nav"><img src="imgs/euaqui.jpg" alt="Trabalhando nisso"></a>
+                    </div><!--img-sobre-->
+
+                    <div class="txt-sobre">
+                        <h2 class="titulo">Olá <span class="emoji">(～￣▽￣)～</span>, <span>Eu sou Vinicius Dantas.</span></h2>
+                        
+                        <p class="tamanhoParagrafo">
+                            Oi, eu sou Vinicius Dantas, tenho 19 anos e sou estudante de Engenharia da Computação com uma paixão especial por desenvolvimento front-end. No meu dia a dia, estou sempre explorando maneiras de criar interfaces modernas, dinâmicas e que proporcionem a melhor experiência possível para o usuário. No meu portfólio, você vai encontrar projetos que mostram meu trabalho com HTML, CSS, JavaScript e frameworks de front-end, onde me esforço para unir design e funcionalidade. Estou constantemente me atualizando e buscando novas ferramentas e tendências para tornar cada projeto ainda mais interativo e acessível.
+                        </p>
+
+                        <div class="btn-social">
+                            <a href="https://www.linkedin.com/in/vinicius-dantas-1b8b92232/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://www.instagram.com/ovinicius.dantas/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://github.com/ViniciusCoelh0" target="_blank"><button><i class="bi bi-github"></i></button></a>
+                        </div>
+                    </div><!--txt-sobre-->
+                </div><!--flex-->
+            </div><!--interace-->
+        </section><!--Sobre-->
+
+        <script src="js/ligth-dark.js"></script>
+        <script src="js/slides.js"></script>
+
+</body>
+</html>
