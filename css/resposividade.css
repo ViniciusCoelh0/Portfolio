@@ -41,12 +41,22 @@
     .btn.active:before {
         left: 2.625rem; /* 42px */
     }
+
+    .card-list .card-item .card-link{
+    width: 300px;
+    height: 600px;
+    }
+
+    .container-slides .container-projects .card-list {
+        gap: 16px;
+    }
+
 }
 
 /* ======================== */
 /* TELAS MENORES (768px)    */
 /* ======================== */
-@media screen and (max-width: 51.25rem) { /* 820px */
+@media screen and (max-width: 52rem) { /* 832x */
     header > .interface {
         flex-direction: column;
         gap: 0.9375rem; /* 15px */
@@ -137,10 +147,9 @@
         height: 600px;
     }
 
-    .container-slides .container-projects .card-list {
-        gap: 18px;
+    .container-slides span .bi{
+        display: none;
     }
-
 
 }
 
@@ -211,11 +220,15 @@
     }
 
     .container-slides .container-projects .card-list {
-        display: flex;
-        align-items: center;
         gap: 20px;
-        padding: 1rem 0;
     }
+
+    .especialidades .container-projects {
+        display: flex;
+        justify-content: center;
+        color: var(--primary-color);
+    }
+    
 }
 
 @media screen and (max-width: 38rem) {

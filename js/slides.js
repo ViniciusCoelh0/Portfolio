@@ -6,13 +6,13 @@ const nextButton = document.querySelector('.bi-arrow-right');
 let slideIndex = 0;
 let slidesToShow = getSlidesToShow();
 let autoSlideInterval;
-const autoSlideDelay = 4000; // Tempo em milissegundos entre os slides (4 segundos)
+const autoSlideDelay = 4000; // Tempo em milissegundos entre os slides (3 segundos)
 let isPaused = false;
 
 // Função para definir quantos slides exibir com base no tamanho da tela
 function getSlidesToShow() {
     const width = window.innerWidth;
-    if (width <= 580) return 1;
+    if (width <= 800) return 1;
     if (width <= 1300) return 2;
     return 3;
 }

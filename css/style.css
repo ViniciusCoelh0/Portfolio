@@ -7,7 +7,7 @@
     --font-color: #000;
     --a-fontColor: #bebebe;
     --a-effect: rgb(68, 218, 218);
-    --box-shadow: 0px 0px 10px 0px #0d7dbe;
+    --box-shadow: 0rem 0rem 0.625rem 0rem #0d7dbe; /* 10px */
     --span: #50ebb2;
     --specs-color: #fafafa;
 }
@@ -16,37 +16,10 @@ html{
     scroll-behavior: smooth;
 }
 
-/* .white-mode{
-    --button: #346402;
-    --primary-color: #202D40;
-    --secundary-color: #dddcdc;
-    --background: #13678A;
-    --font-style:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    --a-fontColor: #123;
-    --box-shadow: 0px 0px 10px 0px #000000;
-    --span: #3a7000;
-    --specs-color: #000000;
-} */
-
-/* Bloco geral */
-
-
-/* .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--secundary-color);
-    width: 6%;
-
-    & .container.active{
-        background-color: #444;
-    }
-} */
-
 /* Especialidades */
 
 .especialidades{
-    padding: 40px 4%;
+    padding: 2.5rem 4%; /* 40px */
 }
 
 section .text span{
@@ -55,9 +28,9 @@ section .text span{
 
 .especialidades .especs-box{
     color: var(--primary-color);
-    padding: 40px;
-    margin-top: 30px;
-    border-radius: 20px;
+    padding: 2.5rem; /* 40px */
+    margin-top: 1.875rem; /* 30px */
+    border-radius: 1.25rem; /* 20px */
     transition: .2s;
 }
 
@@ -68,18 +41,18 @@ section .text span{
 }
 
 .especialidades .especs-box i{
-    font-size: 50px;
+    font-size: 3.125rem; /* 50px */
     color: var(--span);
 }
 
 .especialidades .especs-box h3{
-    font-size: 28px;
-    margin: 15px 0;
+    font-size: 1.75rem; /* 28px */
+    margin: 0.9375rem 0; /* 15px */
 }
 
 .especialidades .especs-box p{
     text-align: justify;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
 }
 
 .especialidades .especs-box  a{
@@ -94,11 +67,11 @@ section .text span{
 
 .especialidades .especs-box a:hover{
     color: var(--span);
-    box-shadow: 0px 0px 6px 0px var(--a-effect);
+    box-shadow: 0rem 0rem 0.375rem 0rem var(--a-effect); /* 6px */
 }
 
 .especialidades .flex{
-    gap: 60px;
+    gap: 3.75rem; /* 60px */
 }
 
 /* Container Projetos */
@@ -119,7 +92,7 @@ section .text span{
 .container-slides .container-projects .card-list{
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 2.5rem; /* 40px */
     padding: 1rem 0;
 }
 
@@ -128,17 +101,17 @@ section .text span{
 }
 
 .card-list .card-item .card-link{
-    width: 400px;
-    height: 600px;
+    width: 25rem;   /* 400px */
+    height: 37.5rem; /* 600px */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     background: var(--background);
-    padding: 18px;
-    border-radius: 12px;
+    padding: 1.125rem; /* 18px */
+    border-radius: 0.75rem; /* 12px */
     text-decoration: none;
-    border: 2px solid transparent;
-    box-shadow: 0 2px 10px var(--span);
+    border: 0.125rem solid transparent; /* 2px */
+    box-shadow: 0 0.125rem 0.625rem var(--span); /* 0 2px 10px */
 }
 
 .card-list .card-item .card-link:hover{
@@ -151,35 +124,35 @@ section .text span{
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 0.625rem; /* 10px */
 }
 
 .card-list .card-link .badge{
     color: var(--font-color);
     background: var(--button);
-    padding: 8px 16px;
+    padding: 0.5rem 1rem; /* 8px 16px */
     font-size: 0.95rem;
     font-weight: 500;
-    margin: 16px 0 18px;
+    margin: 1rem 0 1.125rem; /* 16px 0 18px */
     width: fit-content;
-    border-radius: 50px;
-    height: 40px;
+    border-radius: 3.125rem; /* 50px */
+    height: 2.5rem; /* 40px */
 }
 
 .card-list .card-link .card-title{
-    font-size: 1.19rem;
+    font-size: 1.1875rem; /* 19px */
     color: var(--font-color);
     font-weight: 600;
 }
 
 .card-list .card-link .card-button{
-    height: 35px;
-    width: 35px;
+    height: 2.1875rem; /* 35px */
+    width: 2.1875rem; /* 35px */
     color: var(--button);
     cursor: pointer;
     border-radius: 50%;
-    margin: 30px 0 5px;
-    border: 2px solid var(--button);
+    margin: 1.875rem 0 0.3125rem; /* 30px 0 5px */
+    border: 0.125rem solid var(--button); /* 2px */
     transform: rotate(-45deg);
     transition: 0.4s ease;
 }
@@ -193,7 +166,7 @@ section .text span{
 /* Sobre mim */
 
 section.sobre{
-    padding: 40px 4%;
+    padding: 2.5rem 4%; /* 40px */
 }
 
 
@@ -207,14 +180,14 @@ section.sobre{
 }
 
 .sobre .txt-sobre h2{
-    font-size: 40px;
+    font-size: 2.5rem; /* 40px */
 }
 
 .sobre .txt-sobre h2 span{
     color: var(--span);
     display: block;
-    line-height: 50px;
-    margin-bottom: 25px;
+    line-height: 3.125rem; /* 50px */
+    margin-bottom: 1.5625rem; /* 25px */
 }
 
 .sobre .txt-sobre h2 .emoji{
@@ -223,32 +196,32 @@ section.sobre{
 }
 
 .sobre .txt-sobre p{
-    margin: 10px 0;
-    line-height: 20px;
+    margin: 0.625rem 0; /* 10px */
+    line-height: 1.25rem; /* 20px */
     text-align: justify;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem; /* 40px */
 }
 
 .sobre .txt-sobre .btn-social a button{
-    width: 60px;
-    height: 60px;
+    width: 3.75rem; /* 60px */
+    height: 3.75rem; /* 60px */
     border-radius: 50%;
     border: 0;
     background-color: var(--button);
-    font-size: 30px;
+    font-size: 1.875rem; /* 30px */
     cursor: pointer;
-    margin: 0 8px;
+    margin: 0 0.5rem; /* 8px */
 }
 
 .sobre .txt-sobre .btn-social a button:hover{
-    box-shadow: 0px 0px 8px var(--button);
+    box-shadow: 0rem 0rem 0.5rem var(--button); /* 8px */
     transform: scale(1.05);
 }
 
 .sobre{
-    box-shadow: 0 0 6px 0 black;
+    box-shadow: 0 0 0.375rem 0 black; /* 6px */
 }
 
 .container-projects .card-list span {
-    font-size: 40px;
+    font-size: 2.5rem; /* 40px */
 }
