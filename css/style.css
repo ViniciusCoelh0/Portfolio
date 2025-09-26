@@ -111,7 +111,6 @@ section .text span{
 .especialidades .container-projects{
     display: flex;
     justify-content: center;
-    /* box-shadow: 10px 0 3px 0 beige; */
     color: var(--primary-color);
 }
 
@@ -119,10 +118,9 @@ section .text span{
 /* Arrumar aqui e criar os slides */
 .container-slides .container-projects .card-list{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 25px;
-    padding: 3rem 0;
+    gap: 40px;
+    padding: 1rem 0;
 }
 
 .card-list .card-item{
@@ -197,6 +195,7 @@ section .text span{
 section.sobre{
     padding: 40px 4%;
 }
+
 
 .img-sobre img{
     border-radius: 10%;
