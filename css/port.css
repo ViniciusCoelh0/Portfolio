@@ -127,8 +127,9 @@ header nav ul li{
     width: 83px;
 }
 
+.menu-mobile,
 .btn-menu-mobile {
-    display: none;
+    display: none; /* escondido no desktop */
 }
 
 

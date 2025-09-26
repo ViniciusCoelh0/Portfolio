@@ -2,6 +2,8 @@
 /* RESPONSIVIDADE PADRÃO   */
 /* ======================== */
 @media screen and (max-width: 90rem) { 
+
+
     .card-list .card-item {
         width: 90%;
         margin: 0.625rem auto; /* Centraliza sem estourar largura */
@@ -117,31 +119,31 @@
 
     /* Menu hamburguer */
     .menu-desktop {
-        display: none;
+        display: none; /* esconde menu desktop */
     }
 
     .btn-menu-mobile {
         display: block;
-        font-size: 2rem; /* 32px */
+        font-size: 2rem;
         cursor: pointer;
         color: #fff;
         z-index: 1001;
     }
 
     .menu-mobile {
-        display: none;
+        display: none; /* só aparece quando ativo */
         position: absolute;
         top: 100%;
         right: 0;
         background-color: #111;
         width: 100%;
-        padding: 1.25rem 0; /* 20px */
+        padding: 1.25rem 0;
         z-index: 1000;
         text-align: center;
     }
 
     .menu-mobile.active {
-        display: block;
+        display: block; /* mostra quando a classe active é adicionada via JS */
     }
 
     .menu-mobile ul {
@@ -155,7 +157,7 @@
     .menu-mobile ul li a {
         color: #fff;
         text-decoration: none;
-        font-size: 1.125rem; /* 18px */
+        font-size: 1.125rem;
     }
 
     /* Ajustes para imagens e cards em telas pequenas */
