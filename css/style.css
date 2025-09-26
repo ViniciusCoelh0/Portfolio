@@ -31,7 +31,7 @@ section .text span{
 .especialidades .especs-box{
     color: var(--primary-color);
     padding: 2.5rem; /* 40px */
-    margin-top: 1.875rem; /* 30px */
+    margin-top: 0.89rem; 
     border-radius: 1.25rem; /* 20px */
     transition: .2s;
 }
@@ -102,18 +102,23 @@ section .text span{
     list-style: none;
 }
 
+.card-item{
+    text-align: justify;
+}
+
 .card-list .card-item .card-link{
-    width: 25rem;   /* 400px */
-    height: 37.5rem; /* 600px */
+        width: 25rem;
+    height: 37.5rem;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     background: var(--background);
-    padding: 1.125rem; /* 18px */
-    border-radius: 0.75rem; /* 12px */
+    padding: 1.125rem;
+    border-radius: 0.75rem;
     text-decoration: none;
-    border: 0.125rem solid transparent; /* 2px */
-    box-shadow: 0 0.125rem 0.625rem var(--span); /* 0 2px 10px */
+    border: 0.125rem solid transparent;
+    box-shadow: 0 0.125rem 0.625rem var(--span);
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .card-list .card-item .card-link:hover{
@@ -124,6 +129,7 @@ section .text span{
 
 .card-list .card-link .card-image{
     width: 100%;
+    height: 12.5rem;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 0.625rem; /* 10px */
