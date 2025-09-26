@@ -1,6 +1,22 @@
 /* ======================== */
 /* RESPONSIVIDADE PADRÃO   */
 /* ======================== */
+@media screen and (max-width: 90rem) { 
+    .card-list .card-item {
+        width: 90%;
+        margin: 0.625rem auto; /* Centraliza sem estourar largura */
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-list .card-item .card-link {
+        width: 100%;
+        max-width: 22rem;
+        min-height: 37.5rem; /* altura mínima para todos */
+        height: 100%;      /* força alinhar pelo maior */
+    }
+}
+
 @media screen and (max-width: 64rem) { /* 1024px */
     .flex {
         flex-direction: column;
@@ -42,14 +58,20 @@
         left: 2.625rem; /* 42px */
     }
 
-    .card-list .card-item .card-link{
-    width: 300px;
-    height: 600px;
+    .card-list .card-item {
+        width: 90%;
+        margin: 0.625rem auto; /* Centraliza sem estourar largura */
+        display: flex;
+        justify-content: center;
     }
 
-    .container-slides .container-projects .card-list {
-        gap: 16px;
+    .card-list .card-item .card-link {
+        width: 100%;
+        max-width: 22rem;
+        min-height: 37.5rem; /* altura mínima para todos */
+        height: 100%;      /* força alinhar pelo maior */
     }
+
 
 }
 
@@ -142,13 +164,18 @@
         align-items: normal;
     }
 
-    .card-list .card-item .card-link{
-        width: 320px;
-        height: 600px;
+    .card-list .card-item {
+        width: 95%;
+        margin: 0.625rem auto;
+        display: flex;
+        justify-content: center;
     }
 
-    .container-slides span .bi{
-        display: none;
+    .card-list .card-item .card-link {
+        width: 100%;
+        max-width: 22rem;
+        height: auto;
+        min-height: 37.5rem;
     }
 
 }
@@ -198,8 +225,7 @@
 
     .container-slides {
         flex-direction: column;
-        align-items: center;
-        margin: 0 -2.5rem; 
+        align-items: normal;
     }
 
     .container-slides span .bi{
@@ -214,24 +240,22 @@
         display: none;
     }
 
-    .card-list .card-item .card-link{
-        width: 350px;
-        height: 600px;
-    }
-
-    .container-slides .container-projects .card-list {
-        gap: 20px;
-    }
-
-    .especialidades .container-projects {
+    .card-list .card-item {
+        width: 100%;
+        margin: 0.625rem auto;
         display: flex;
         justify-content: center;
-        color: var(--primary-color);
     }
-    
+
+    .card-list .card-item .card-link {
+        width: 100%;
+        max-width: 20rem; /* reduz um pouco em telas bem pequenas */
+        height: auto;
+        min-height: 37.5rem;
+    }
 }
 
-@media screen and (max-width: 38rem) {
+@media screen and (max-width: 40rem) {
 
     .topo-do-site .img-topo-site img {
         width: 8.75rem; /* 140px */
